@@ -74,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const updateSidebar = (item) => {
         const aptNumber = item.apt_number && item.apt_number !== 'N/A' ? `, ${item.apt_number}` : '';
         const itemImages = Array.isArray(item.images) ? item.images : [];
+        const urlContent = item.url ? `<a href="${item.url}" target="_blank">${item.url}</a>` : 'N/A';
 
         const sidebar = document.querySelector('.sidebar');
         sidebar.innerHTML = `
@@ -98,6 +99,9 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="sidebar-dates">
                 <span><i class="material-icons">event_available</i> Available: ${formatDate(item.avail_date)}</span>
                 <span><i class="material-icons">event_note</i> Listed: ${formatDate(item.listed_date)}</span>
+            </div>
+            <div class="sidebar-url">
+                <span><i class="material-icons">link</i> URL: ${urlContent}</span>
             </div>
             <div class="sidebar-thumbnails">
                 ${itemImages.length > 0 ? itemImages.map(img => `
@@ -133,6 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     popupContent = `<b>${item.address}, Tallahassee, FL</b>`;
                 } else {
                     const aptNumber = item.apt_number && item.apt_number !== 'N/A' ? `, ${item.apt_number}` : '';
+                    const urlContent = item.url ? `<a href="${item.url}" target="_blank">${item.url}</a>` : 'N/A';
                     popupContent = `
                         <div class="popup-container">
                             <h3>${item.address}${aptNumber}, Tallahassee, FL</h3>
@@ -155,6 +160,9 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="popup-dates">
                                 <span>Available: ${formatDate(item.avail_date)}</span>
                                 <span>Listed: ${formatDate(item.listed_date)}</span>
+                            </div>
+                            <div class="popup-url">
+                                <span><i class="material-icons">link</i> URL: ${urlContent}</span>
                             </div>
                         </div>
                     `;

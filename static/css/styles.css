@@ -56,6 +56,23 @@ body {
     justify-content: space-between;
 }
 
+.popup-url {
+    font-size: 0.9em;
+    color: #666;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.popup-url a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.popup-url a:hover {
+    text-decoration: underline;
+}
+
 /* Sidebar styling */
 .sidebar-header {
     color: #1a73e8;
@@ -96,6 +113,23 @@ body {
 .sidebar-dates span {
     display: flex;
     align-items: center;
+}
+
+.sidebar-url {
+    font-size: 0.9em;
+    color: #666;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.sidebar-url a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.sidebar-url a:hover {
+    text-decoration: underline;
 }
 
 /* Sidebar thumbnails */
@@ -168,6 +202,7 @@ body {
     margin-top: 20px;
     overflow-x: auto;
     padding: 10px;
+    max-width: 80%;
 }
 
 .viewer-thumbnail {
