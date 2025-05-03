@@ -22,6 +22,36 @@ document.addEventListener('DOMContentLoaded', () => {
         popupAnchor: [1, -34]
     });
 
+    const greenIcon = L.icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34]
+    });
+
+    const orangeIcon = L.icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-orange.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34]
+    });
+
+    // Function to get icon based on category
+    const getIconByCategory = (category) => {
+        switch (category) {
+            case 'work':
+                return redIcon;
+            case 'Townhome':
+                return blueIcon;
+            case 'Home':
+                return greenIcon;
+            case 'Apartment':
+                return orangeIcon;
+            default:
+                return blueIcon; // Fallback for unknown categories
+        }
+    };
+
     // Function to format date (e.g., "07012025" to "July 1st, 2025")
     const formatDate = (dateStr) => {
         if (!dateStr || dateStr === 'N/A') return 'N/A';
@@ -128,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
             data.forEach(item => {
                 const isWork = item.category === 'work';
                 const marker = L.marker([item.lat, item.lon], {
-                    icon: isWork ? redIcon : blueIcon
+                    icon: getIconByCategory(item.category)
                 }).addTo(map);
 
                 // Create popup content
