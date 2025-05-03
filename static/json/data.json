@@ -1,0 +1,53 @@
+[
+    {
+        "id": 1,
+        "lat": 30.4684,
+        "lon": -84.3414,
+        "beds": 3,
+        "baths": 3,
+        "sqft": 1178,
+        "eoas": 4.0,
+        "gables": 4.8,
+        "address": "2776 Tess Cir",
+        "apt_number": "N/A",
+        "category": "townhome",
+        "avail_date": "07012025",
+        "listed_date": "04292025",
+        "images": [
+            "static/img/1/0236dc595aa95128c76d902cea251732-uncropped_scaled_within_1536_1152.webp",
+            "static/img/1/2f26866717e0c3cb2df9ad002483942a-uncropped_scaled_within_1536_1152.webp",
+            "static/img/1/39f914c6d5fea6feaec0860a761562bd-uncropped_scaled_within_1536_1152.webp",
+            "static/img/1/3c2e3c3aa65f17a0f588262484269acc-cc_ft_768.webp",
+            "static/img/1/3ec1c3b24ecb7f0f99c24df21a91f2ec-uncropped_scaled_within_1536_1152.webp",
+            "static/img/1/46f9c71a8aca5e83d238d1bafa3aeb3b-uncropped_scaled_within_1536_1152.webp",
+            "static/img/1/4ebdc6b56da1d1c360c182dcc895eb9a-uncropped_scaled_within_1536_1152.webp",
+            "static/img/1/5d8247b274124f60ddcb0fb6ef7ae19a-uncropped_scaled_within_1536_1152.webp",
+            "static/img/1/728e0f0300c6f8a447ac67bead76b59c-uncropped_scaled_within_1536_1152.webp",
+            "static/img/1/7f78661808e2dd3bb02472868e9eeac3-uncropped_scaled_within_1536_1152.webp",
+            "static/img/1/933d9d7662ca1970855e8c4913b8eb41-uncropped_scaled_within_1536_1152.webp",
+            "static/img/1/97503781b7dd8acaaf348928b1360d78-uncropped_scaled_within_1536_1152.webp",
+            "static/img/1/9801ab8d86a01b2a819b6b6c18eb32c6-uncropped_scaled_within_1536_1152.webp",
+            "static/img/1/a371674fb291ab9bcc8f9b064bdee654-uncropped_scaled_within_1536_1152.webp",
+            "static/img/1/d0a87cd4d9184ca5adbb334c922d71f1-uncropped_scaled_within_1536_1152.webp",
+            "static/img/1/dbe115b240665696505c9f9990c19f15-uncropped_scaled_within_1536_1152.webp",
+            "static/img/1/dccead3ba9817dd63034a7b8bc9bc02c-uncropped_scaled_within_1536_1152.webp",
+            "static/img/1/f64e286be6013a7043a200b10fc44c7e-uncropped_scaled_within_1536_1152.webp"
+        ]
+    },
+    {
+        "id": 100,
+        "lat": 30.4751,
+        "lon": -84.2782,
+        "category": "work",
+        "address": "100 John Knox Rd",
+        "images": []
+    },
+    {
+        "id": 101,
+        "lat": 30.446,
+        "lon": -84.2986,
+        "category": "work",
+        "address": "1011 Academic Way",
+        "images": []
+    }
+]
