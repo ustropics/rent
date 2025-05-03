@@ -83,11 +83,13 @@ document.addEventListener('DOMContentLoaded', () => {
             </h2>
             <div class="sidebar-content">
                 <div class="sidebar-section">
+                    <div><i class="material-icons">attach_money</i> Price: ${item.price || 'N/A'}</div>
                     <div><i class="material-icons">bed</i> Beds: ${item.beds || 'N/A'}</div>
                     <div><i class="material-icons">bathtub</i> Baths: ${item.baths || 'N/A'}</div>
                     <div><i class="material-icons">square_foot</i> Sqft: ${item.sqft || 'N/A'}</div>
                 </div>
                 <div class="sidebar-section">
+                    <div><i class="material-icons">fingerprint</i> ID: ${item.id || 'N/A'}</div>
                     <div><i class="material-icons">category</i> Category: ${item.category || 'N/A'}</div>
                     <div><i class="material-icons">star</i> EOAS: ${item.eoas || 'N/A'} miles</div>
                     <div><i class="material-icons">star_border</i> Gables: ${item.gables || 'N/A'} miles</div>
@@ -137,11 +139,13 @@ document.addEventListener('DOMContentLoaded', () => {
                             <table class="popup-table">
                                 <tr>
                                     <td>
+                                        <div><i class="material-icons">attach_money</i> Price: ${item.price || 'N/A'}</div>
                                         <div><i class="material-icons">bed</i> Beds: ${item.beds || 'N/A'}</div>
                                         <div><i class="material-icons">bathtub</i> Baths: ${item.baths || 'N/A'}</div>
                                         <div><i class="material-icons">square_foot</i> Sqft: ${item.sqft || 'N/A'}</div>
                                     </td>
                                     <td>
+                                        <div><i class="material-icons">fingerprint</i> ID: ${item.id || 'N/A'}</div>
                                         <div><i class="material-icons">category</i> Category: ${item.category || 'N/A'}</div>
                                         <div><i class="material-icons">star</i> EOAS: ${item.eoas || 'N/A'} miles</div>
                                         <div><i class="material-icons">star_border</i> Gables: ${item.gables || 'N/A'} miles</div>

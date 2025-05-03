@@ -8,9 +8,10 @@
         "sqft": 1178,
         "eoas": 4.0,
         "gables": 4.8,
+        "price": "$1,400",
         "address": "2776 Tess Cir",
         "apt_number": "N/A",
-        "category": "townhome",
+        "category": "Townhome",
         "avail_date": "07012025",
         "listed_date": "04292025",
         "images": [
