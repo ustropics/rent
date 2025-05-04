@@ -12,11 +12,12 @@ body {
 
 .sidebar {
     width: 25%;
-    background-color: #ffffff;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     padding: 20px;
     box-sizing: border-box;
     overflow-y: auto;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.2);
+    border-right: 1px solid #e0e0e0;
 }
 
 #map {
@@ -59,9 +60,18 @@ body {
 .popup-url {
     font-size: 0.9em;
     color: #666;
+    margin-top: 10px;
+}
+
+.popup-url .url-header {
     display: flex;
     align-items: center;
-    margin-top: 10px;
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+
+.popup-url .url-content {
+    margin-left: 28px; /* Align with icon + text */
 }
 
 .popup-url a {
@@ -71,6 +81,19 @@ body {
 
 .popup-url a:hover {
     text-decoration: underline;
+}
+
+.popup-status {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
+}
+
+.popup-status .status-header {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 /* Sidebar styling */
@@ -118,9 +141,18 @@ body {
 .sidebar-url {
     font-size: 0.9em;
     color: #666;
+    margin-top: 10px;
+}
+
+.sidebar-url .url-header {
     display: flex;
     align-items: center;
-    margin-top: 10px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.sidebar-url .url-content {
+    margin-left: 28px; /* Align with icon + text */
 }
 
 .sidebar-url a {
@@ -132,6 +164,41 @@ body {
     text-decoration: underline;
 }
 
+.sidebar-status {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
+}
+
+.sidebar-status .status-header {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Status bar styling */
+.status-bar {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.status-stage {
+    flex: 1;
+    background-color: #ddd;
+    padding: 8px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 0.8em;
+    color: #666;
+}
+
+.status-stage.completed {
+    background-color: #1a73e8;
+    color: #fff;
+}
+
 /* Sidebar thumbnails */
 .sidebar-thumbnails {
     display: flex;
@@ -141,7 +208,7 @@ body {
 }
 
 .sidebar-thumbnail {
-    width: calc(25% - 10px);
+    width: calc(25% - 10px); /* 4 per row with 10px gap */
     height: 60px;
     object-fit: cover;
     cursor: pointer;

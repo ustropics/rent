@@ -66,6 +66,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+    // Function to generate status bar HTML
+    const generateStatusBar = (status) => {
+        const stages = [
+            { label: 'Contacted', value: 1 },
+            { label: 'Viewing Scheduled', value: 2 },
+            { label: 'Viewed', value: 3 },
+            { label: 'Application Submitted', value: 4 }
+        ];
+        const statusValue = Number(status) || 0;
+
+        return `
+            <div class="status-bar">
+                ${stages.map(stage => `
+                    <div class="status-stage ${statusValue >= stage.value ? 'completed' : ''}">
+                        <span>${stage.label}</span>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+    };
+
     // Function to open image viewer
     const openImageViewer = (images, selectedIndex) => {
         if (!images || images.length === 0) return;
@@ -131,7 +152,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span><i class="material-icons">event_note</i> Listed: ${formatDate(item.listed_date)}</span>
             </div>
             <div class="sidebar-url">
-                <span><i class="material-icons">link</i> URL: ${urlContent}</span>
+                <span class="url-header"><i class="material-icons">link</i> URL</span>
+                <div class="url-content">${urlContent}</div>
+            </div>
+            <div class="sidebar-status">
+                <span class="status-header"><i class="material-icons">track_changes</i> Status</span>
+                ${generateStatusBar(item.status)}
             </div>
             <div class="sidebar-thumbnails">
                 ${itemImages.length > 0 ? itemImages.map(img => `
@@ -192,7 +218,12 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <span>Listed: ${formatDate(item.listed_date)}</span>
                             </div>
                             <div class="popup-url">
-                                <span><i class="material-icons">link</i> URL: ${urlContent}</span>
+                                <span class="url-header"><i class="material-icons">link</i> URL</span>
+                                <div class="url-content">${urlContent}</div>
+                            </div>
+                            <div class="popup-status">
+                                <span class="status-header"><i class="material-icons">track_changes</i> Status</span>
+                                ${generateStatusBar(item.status)}
                             </div>
                         </div>
                     `;
