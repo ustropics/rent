@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize Leaflet map
-    const map = L.map('map').setView([30.4384, -84.3074], 12);
+    const map = L.map('map').setView([30.4384, -84.3074], 13);
 
     // Add OpenStreetMap tiles
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
