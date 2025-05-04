@@ -12,12 +12,32 @@ body {
 
 .sidebar {
     width: 25%;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     padding: 20px;
     box-sizing: border-box;
     overflow-y: auto;
     box-shadow: 4px 0 12px rgba(0, 0, 0, 0.2);
     border-right: 1px solid #e0e0e0;
+}
+
+/* Status-based gradients */
+.sidebar.status-0 {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.sidebar.status-1 {
+    background: linear-gradient(135deg, #f5f7fa 0%, #d0e4f5 100%);
+}
+
+.sidebar.status-2 {
+    background: linear-gradient(135deg, #f5f7fa 0%, #f5d0d7 100%);
+}
+
+.sidebar.status-3 {
+    background: linear-gradient(135deg, #f5f7fa 0%, #d9d0f5 100%);
+}
+
+.sidebar.status-4 {
+    background: linear-gradient(135deg, #f5f7fa 0%, #d0f5d0 100%);
 }
 
 #map {
@@ -66,7 +86,7 @@ body {
 .popup-url .url-header {
     display: flex;
     align-items: center;
-    font-weight: bolder;
+    font-weight: bold;
     margin-bottom: 5px;
 }
 
@@ -208,7 +228,7 @@ body {
 }
 
 .sidebar-thumbnail {
-    width: calc(25% - 10px); /* 4 per row with 10px gap */
+    width: calc(22.5% - 10px); /* ~90% of previous 25%, 4 per row */
     height: 60px;
     object-fit: cover;
     cursor: pointer;

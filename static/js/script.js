@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize Leaflet map
-    const map = L.map('map').setView([30.4384, -84.3074], 13);
+    const map = L.map('map').setView([30.4384, -84.3074], 12);
 
     // Add OpenStreetMap tiles
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -126,8 +126,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const aptNumber = item.apt_number && item.apt_number !== 'N/A' ? `, ${item.apt_number}` : '';
         const itemImages = Array.isArray(item.images) ? item.images : [];
         const urlContent = item.url ? `<a href="${item.url}" target="_blank">${item.url}</a>` : 'N/A';
+        const statusValue = Number(item.status) || 0;
 
         const sidebar = document.querySelector('.sidebar');
+        // Remove previous status classes and add new one
+        sidebar.className = 'sidebar'; // Reset to base class
+        sidebar.classList.add(`status-${statusValue}`);
+
         sidebar.innerHTML = `
             <h2 class="sidebar-header">
                 <i class="material-icons">home</i>
